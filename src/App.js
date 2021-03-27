@@ -5,8 +5,36 @@ import Checkout from "./components/Checkout"
 import LogIn from "./components/LogIn"
 import { BrowserRouter as Router,Switch, Route  } from "react-router-dom";
 import "./index.css"
+import { useEffect } from "react";
+import {auth} from './fireBase';
+import {useStateValue} from "./StateProvider"
 
 function App() {
+  const [{}, dispatch] = useStateValue();
+
+  useEffect(() => {
+    auth.onAuthStateChanged(authUser => {
+      console.log('THE USER IS >>>',authUser);
+
+      if(authUser){
+        //the use logged in ot was logged
+
+        dispatch({
+          type:'SET_USER',
+          user: authUser
+        })
+      }else{
+        //logged out
+
+        dispatch({
+          type:'SET_USER',
+          user: null
+        })
+      }
+    })
+    
+  }, [])
+
   return(
     <Router>
       <div className="app">
