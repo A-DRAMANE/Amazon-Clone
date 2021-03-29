@@ -48,7 +48,7 @@ function App() {
           </Route>
           <Route path="">
             <div className="bande">
-              <h1 className="faso" ><span className="amazone">Amazon</span> Clone <span className="from">From</span> <span className="fils">Fils du Faso</span><span className="imageLogo"></span></h1>
+              <h1 className="faso" >Funny <span className="amazone">Amazon</span> Clone <span className="from">From</span> <span className="fils">Fils du Faso</span><span className="imageLogo"></span></h1>
             </div>
             <Header />
             <Home />
