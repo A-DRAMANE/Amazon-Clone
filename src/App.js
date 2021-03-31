@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import Home from "./components/Home"
 import Checkout from "./components/Checkout"
 import LogIn from "./components/LogIn"
+import Payment from "./components/Payment"
 import { BrowserRouter as Router,Switch, Route  } from "react-router-dom";
 import "./index.css"
 import { useEffect } from "react";
@@ -45,6 +46,11 @@ function App() {
           <Route path="/checkout">
             <Header />
             <Checkout />
+          </Route>
+          <Route path="/payment">
+            <Header />
+            <Payment/>
+            <h1>i'm the payment route</h1>
           </Route>
           <Route path="">
             <div className="bande">

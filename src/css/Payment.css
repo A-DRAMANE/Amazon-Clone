@@ -1,0 +1,8 @@
+.payment {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: white;
+  height: max-content;
+  justify-content: center;
+}
