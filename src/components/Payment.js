@@ -15,7 +15,7 @@ function Payment() {
             <div className="pament__deliver">Delivery Address {user?.email}</div>
             <hr/>
 
-            <div>
+            <div className="payment__items">
                 <span>Review items and delivery</span>
                 <div className="paymentItems">
                     {basket.map(item => (
@@ -31,9 +31,9 @@ function Payment() {
             </div>
             <hr/>
 
-            <div>
+            <div className="payement__method">
                 <h2>Payment Method</h2>
-                <div>
+                <div className="payement__pay">
                     <h3>Order Total:{}</h3>
                     <button>Valid Payment</button>
                 </div>

@@ -50,7 +50,6 @@ function App() {
           <Route path="/payment">
             <Header />
             <Payment/>
-            <h1>i'm the payment route</h1>
           </Route>
           <Route path="">
             <div className="bande">
